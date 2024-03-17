@@ -1,9 +1,4 @@
-//
-//  SceneDelegate.swift
-//  L3.02 hw Networking
-//
-//  Created by Valentin on 18.03.2024.
-//
+
 
 import UIKit
 
