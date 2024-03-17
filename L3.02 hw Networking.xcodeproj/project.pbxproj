@@ -13,7 +13,7 @@
 		A7FC58E32BA75BAC006E309D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FC58E12BA75BAC006E309D /* Main.storyboard */; };
 		A7FC58E52BA75BAD006E309D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7FC58E42BA75BAD006E309D /* Assets.xcassets */; };
 		A7FC58E82BA75BAD006E309D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FC58E62BA75BAD006E309D /* LaunchScreen.storyboard */; };
-		A7FC58F52BA772A1006E309D /* musicTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FC58F42BA772A1006E309D /* musicTrack.swift */; };
+		A7FC58F52BA772A1006E309D /* trackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FC58F42BA772A1006E309D /* trackList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		A7FC58E42BA75BAD006E309D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7FC58E72BA75BAD006E309D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7FC58E92BA75BAD006E309D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7FC58F42BA772A1006E309D /* musicTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicTrack.swift; sourceTree = "<group>"; };
+		A7FC58F42BA772A1006E309D /* trackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trackList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 		A7FC58F32BA7728D006E309D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A7FC58F42BA772A1006E309D /* musicTrack.swift */,
+				A7FC58F42BA772A1006E309D /* trackList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 				A7FC58E02BA75BAC006E309D /* ViewController.swift in Sources */,
 				A7FC58DC2BA75BAC006E309D /* AppDelegate.swift in Sources */,
 				A7FC58DE2BA75BAC006E309D /* SceneDelegate.swift in Sources */,
-				A7FC58F52BA772A1006E309D /* musicTrack.swift in Sources */,
+				A7FC58F52BA772A1006E309D /* trackList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "L3.02 hw Networking/Info.plist";
+				INFOPLIST_FILE = "L3.02 hw Networking/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -363,7 +363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "L3.02 hw Networking/Info.plist";
+				INFOPLIST_FILE = "L3.02 hw Networking/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

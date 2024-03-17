@@ -9,18 +9,49 @@ enum Link {
     }
 }
 
+enum Alert {
+    case success
+    case failed
+    
+    var title: String {
+        switch self {
+        case .success:
+            return "Success"
+        case .failed:
+            return "Failed"
+        }
+    }
+    
+    var message: String {
+        switch self {
+        case .success:
+            return "You can see the results in the Debug area"
+        case .failed:
+            return "You can see error in the Debug area"
+        }
+    }
+}
+
 final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        fetchHotTracks()
     }
 
-
+    // MARK: - Private Methods
+    private func showAlert(withStatus status: Alert) {
+        let alert = UIAlertController(title: status.title, message: status.message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        DispatchQueue.main.async { [unowned self] in
+            present(alert, animated: true)
+        }
+    }
 }
 
 // MARK: - Networking
-
 extension ViewController {
     private func fetchHotTracks() {
         URLSession.shared.dataTask(with: Link.hotTracksURL.url) { [unowned self] data, _, error in
@@ -29,13 +60,17 @@ extension ViewController {
                 return
             }
             
-            do {
-                let course = try JSONDecoder().decode(Course.self, from: data)
-                showAlert(withStatus: .success)
-                print(course)
-            } catch {
-                showAlert(withStatus: .failed)
-                print(error)
+            DispatchQueue.main.async { [unowned self] in
+                do {
+                    
+                    let trackList = try JSONDecoder().decode(trackList.self, from: data)
+                    showAlert(withStatus: .success)
+                    print(trackList)
+                    
+                } catch {
+                    showAlert(withStatus: .failed)
+                    print(error)
+                }
             }
             
         }.resume()
