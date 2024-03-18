@@ -62,11 +62,11 @@ extension ViewController {
             
             DispatchQueue.main.async { [unowned self] in
                 do {
-                    
-                    let trackList = try JSONDecoder().decode(trackList.self, from: data)
+
+                    let TrackList = try JSONDecoder().decode(TrackList.self, from: data)
                     showAlert(withStatus: .success)
-                    print(trackList)
-                    
+                    print(TrackList)
+
                 } catch {
                     showAlert(withStatus: .failed)
                     print(error)
