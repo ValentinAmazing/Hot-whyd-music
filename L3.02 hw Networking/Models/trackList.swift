@@ -1,6 +1,7 @@
 
 import Foundation
 
+
 ///
 struct TrackList: Decodable {
     let hasMore: HasMore
@@ -15,7 +16,7 @@ struct Track: Decodable {
     let _id: String
     let eId: String
     let name: String
-    let img: String
+    let img: URL?
     let uId: String
     let uNm: String
     let pl: PlayList?
