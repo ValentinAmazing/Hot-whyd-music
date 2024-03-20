@@ -6,16 +6,12 @@ final class MainViewController: UITableViewController {
 
     private let networkManager = NetworkManager.shared
 
-    private var trackList: [TrackList] = [] // без массива не получилось инициализировать(
     private var musicTracks: [Track] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         fetchHotTracks()
-        if !trackList.isEmpty {
-            musicTracks = trackList[0].tracks
-        }
     }
 
     // MARK: - Table view data source
@@ -30,7 +26,6 @@ final class MainViewController: UITableViewController {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        print("func tableView() cellForRowAt")
         let cell = tableView.dequeueReusableCell(withIdentifier: "musicTrackCell", for: indexPath)
         guard let cell = cell as? MusicTrackCell else { return UITableViewCell() }
         let track = musicTracks[indexPath.row]
@@ -47,8 +42,8 @@ extension MainViewController {
             [unowned self] result in
             switch result {
             case .success(let trackList):
-                self.trackList.append(trackList)
-                print(trackList)
+                musicTracks = trackList.tracks
+                tableView.reloadData()
             case .failure(let error):
                 let alert = UIAlertController(
                     title: "Failure",

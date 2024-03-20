@@ -10,6 +10,8 @@ final class MusicTrackCell: UITableViewCell {
     private var networkManager = NetworkManager.shared
         
     func configure(with track: Track) {
+        trackNameLabel.text = track.name
+        
         guard let trackImgURL = track.img else {return}
 
         networkManager.fetchImage(from: trackImgURL) { [unowned self] result in
