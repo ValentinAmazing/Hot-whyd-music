@@ -32,7 +32,7 @@ enum Alert {
     }
 }
 
-final class ViewController: UIViewController {
+final class MainViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,7 @@ final class ViewController: UIViewController {
 }
 
 // MARK: - Networking
-extension ViewController {
+extension MainViewController {
     private func fetchHotTracks() {
         URLSession.shared.dataTask(with: Link.hotTracksURL.url) { [unowned self] data, _, error in
             guard let data else {
