@@ -11,6 +11,8 @@ final class MainViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.rowHeight = 150
+        
         fetchHotTracks()
     }
 

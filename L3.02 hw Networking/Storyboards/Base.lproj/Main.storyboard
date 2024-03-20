@@ -31,7 +31,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trackName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFO-mG-GGH">
-                                            <rect key="frame" x="165" y="11" width="213" height="29"/>
+                                            <rect key="frame" x="165" y="60.666666666666657" width="83.666666666666686" height="29"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="29" id="aRk-BL-SRz"/>
                                             </constraints>
@@ -41,9 +41,8 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="gFO-mG-GGH" firstAttribute="leading" secondItem="hvG-DS-PXo" secondAttribute="trailing" constant="5" id="2dc-OL-l0J"/>
-                                        <constraint firstItem="gFO-mG-GGH" firstAttribute="trailing" secondItem="UJS-AT-WdB" secondAttribute="trailingMargin" constant="5" id="Zce-6s-e6Q"/>
-                                        <constraint firstItem="gFO-mG-GGH" firstAttribute="top" secondItem="UJS-AT-WdB" secondAttribute="topMargin" id="cfb-Td-v6h"/>
+                                        <constraint firstItem="gFO-mG-GGH" firstAttribute="centerY" secondItem="UJS-AT-WdB" secondAttribute="centerY" id="Sk5-rE-9Sw"/>
+                                        <constraint firstItem="gFO-mG-GGH" firstAttribute="leading" secondItem="hvG-DS-PXo" secondAttribute="trailing" constant="5" id="fBV-Ir-6rJ"/>
                                         <constraint firstItem="hvG-DS-PXo" firstAttribute="leading" secondItem="UJS-AT-WdB" secondAttribute="leading" constant="20" symbolic="YES" id="jGb-Yv-FKt"/>
                                         <constraint firstItem="hvG-DS-PXo" firstAttribute="top" secondItem="UJS-AT-WdB" secondAttribute="top" constant="5" id="pss-yj-x3X"/>
                                     </constraints>
