@@ -31,16 +31,19 @@
                                                 <constraint firstAttribute="width" constant="140" id="aZe-bj-0vJ"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qan-pw-Mo6">
-                                            <rect key="frame" x="63" y="52" width="54.333333333333343" height="46.333333333333343"/>
+                                        <button opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qan-pw-Mo6">
+                                            <rect key="frame" x="72.333333333333329" y="57.333333333333329" width="35.333333333333329" height="35.333333333333329"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Button">
                                                 <color key="titleColor" systemColor="labelColor"/>
                                                 <imageReference key="image" image="play.fill" catalog="system" variableValue="0.0"/>
                                             </state>
-                                            <buttonConfiguration key="configuration" style="plain">
+                                            <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
                                                 <imageReference key="image" image="play.fill" catalog="system" symbolScale="large" variableValue="0.0"/>
-                                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="27"/>
+                                                <backgroundConfiguration key="background">
+                                                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                                </backgroundConfiguration>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
                                                 <color key="baseForegroundColor" systemColor="labelColor"/>
                                             </buttonConfiguration>
                                         </button>
@@ -114,6 +117,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
