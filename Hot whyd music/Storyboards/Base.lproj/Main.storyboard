@@ -24,15 +24,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note.list" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hvG-DS-PXo">
-                                            <rect key="frame" x="20" y="6" width="140" height="138.66666666666666"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trackName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFO-mG-GGH">
+                                            <rect key="frame" x="175" y="65" width="198" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glh-Qe-sNj">
+                                            <rect key="frame" x="20" y="0.0" width="150" height="150"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="140" id="W10-f8-2hu"/>
-                                                <constraint firstAttribute="width" constant="140" id="aZe-bj-0vJ"/>
+                                                <constraint firstAttribute="width" constant="150" id="nib-BL-uew"/>
+                                                <constraint firstAttribute="height" constant="150" id="ws4-6a-Vj9"/>
                                             </constraints>
-                                        </imageView>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="gray" image="music.note.list" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="101"/>
+                                            </buttonConfiguration>
+                                        </button>
                                         <button opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qan-pw-Mo6">
-                                            <rect key="frame" x="72.333333333333329" y="57.333333333333329" width="35.333333333333329" height="35.333333333333329"/>
+                                            <rect key="frame" x="78" y="57.333333333333329" width="34.333333333333343" height="35.333333333333329"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Button">
                                                 <color key="titleColor" systemColor="labelColor"/>
@@ -47,25 +57,19 @@
                                                 <color key="baseForegroundColor" systemColor="labelColor"/>
                                             </buttonConfiguration>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trackName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFO-mG-GGH">
-                                            <rect key="frame" x="165" y="65" width="208" height="20.333333333333329"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Qan-pw-Mo6" firstAttribute="centerX" secondItem="hvG-DS-PXo" secondAttribute="centerX" id="1O7-fZ-OlI"/>
+                                        <constraint firstItem="Qan-pw-Mo6" firstAttribute="centerX" secondItem="glh-Qe-sNj" secondAttribute="centerX" id="1O7-fZ-OlI"/>
+                                        <constraint firstItem="glh-Qe-sNj" firstAttribute="top" secondItem="UJS-AT-WdB" secondAttribute="top" id="4YV-gA-4DJ"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="gFO-mG-GGH" secondAttribute="trailing" id="EWk-Sx-Emt"/>
                                         <constraint firstItem="gFO-mG-GGH" firstAttribute="centerY" secondItem="UJS-AT-WdB" secondAttribute="centerY" id="Sk5-rE-9Sw"/>
-                                        <constraint firstItem="gFO-mG-GGH" firstAttribute="leading" secondItem="hvG-DS-PXo" secondAttribute="trailing" constant="5" id="fBV-Ir-6rJ"/>
-                                        <constraint firstItem="Qan-pw-Mo6" firstAttribute="centerY" secondItem="hvG-DS-PXo" secondAttribute="centerY" id="ht2-PB-CYx"/>
-                                        <constraint firstItem="hvG-DS-PXo" firstAttribute="leading" secondItem="UJS-AT-WdB" secondAttribute="leading" constant="20" symbolic="YES" id="jGb-Yv-FKt"/>
-                                        <constraint firstItem="hvG-DS-PXo" firstAttribute="top" secondItem="UJS-AT-WdB" secondAttribute="top" constant="5" id="pss-yj-x3X"/>
+                                        <constraint firstItem="gFO-mG-GGH" firstAttribute="leading" secondItem="glh-Qe-sNj" secondAttribute="trailing" constant="5" id="fBV-Ir-6rJ"/>
+                                        <constraint firstItem="Qan-pw-Mo6" firstAttribute="centerY" secondItem="glh-Qe-sNj" secondAttribute="centerY" id="ht2-PB-CYx"/>
+                                        <constraint firstItem="glh-Qe-sNj" firstAttribute="leading" secondItem="UJS-AT-WdB" secondAttribute="leading" constant="20" symbolic="YES" id="miQ-FT-a5x"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="musicTrackImage" destination="hvG-DS-PXo" id="nnR-Cz-wdd"/>
+                                    <outlet property="imageButton" destination="glh-Qe-sNj" id="VFQ-uL-Z7A"/>
                                     <outlet property="trackNameLabel" destination="gFO-mG-GGH" id="4IK-m9-OFF"/>
                                 </connections>
                             </tableViewCell>

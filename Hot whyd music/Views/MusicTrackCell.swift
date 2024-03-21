@@ -4,11 +4,13 @@ import UIKit
 
 final class MusicTrackCell: UITableViewCell {
    
-    @IBOutlet private var musicTrackImage: UIImageView!
+    
+    @IBOutlet private var imageButton: UIButton!
     @IBOutlet private var trackNameLabel: UILabel!
-   
+    
     private var networkManager = NetworkManager.shared
-        
+       
+    
     func configure(with track: Track) {
         trackNameLabel.text = track.name
         
@@ -17,7 +19,7 @@ final class MusicTrackCell: UITableViewCell {
         networkManager.fetchImage(from: trackImgURL) { [unowned self] result in
             switch result {
             case .success(let imageData):
-                musicTrackImage.image = UIImage(data: imageData)
+                imageButton.setImage(UIImage(data: imageData), for: .normal)
             case .failure(let error):
                 print(error)
             }
