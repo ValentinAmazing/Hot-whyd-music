@@ -40,6 +40,9 @@
                                             <buttonConfiguration key="configuration" style="gray" image="music.note.list" catalog="system">
                                                 <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="101"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="touchImageButton" destination="qSH-pN-eJD" eventType="touchUpInside" id="NgA-0r-tdC"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qan-pw-Mo6">
                                             <rect key="frame" x="78" y="57.333333333333329" width="34.333333333333343" height="35.333333333333329"/>
@@ -70,6 +73,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imageButton" destination="glh-Qe-sNj" id="VFQ-uL-Z7A"/>
+                                    <outlet property="playIconButton" destination="Qan-pw-Mo6" id="gc3-4d-QQA"/>
                                     <outlet property="trackNameLabel" destination="gFO-mG-GGH" id="4IK-m9-OFF"/>
                                 </connections>
                             </tableViewCell>
