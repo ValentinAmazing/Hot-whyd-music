@@ -11,7 +11,7 @@ final class MusicTrackCell: UITableViewCell {
     private var isMusicPlaing: Bool = false
     private var networkManager = NetworkManager.shared
        
-    @IBAction func touchImageButton() {
+    @IBAction func touchButton() {
         if isMusicPlaing {
             playIconButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
             isMusicPlaing.toggle()
