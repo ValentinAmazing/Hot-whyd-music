@@ -6,7 +6,7 @@ enum Link {
     case hotTracksURL
     
     var url: URL {
-        URL(string: "https://gopenwhyd.org/hot?format=json")!
+        URL(string: "https://openwhyd.org/hot?format=json")!
     }
 }
 ///
