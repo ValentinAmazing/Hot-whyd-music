@@ -3,16 +3,13 @@ import UIKit
 
 
 final class MainViewController: UITableViewController {
-
     private let networkManager = NetworkManager.shared
-
     private var musicTracks: [Track] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.rowHeight = 150
-        
         fetchHotTracks()
     }
 
@@ -28,8 +25,13 @@ final class MainViewController: UITableViewController {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "musicTrackCell", for: indexPath)
-        guard let cell = cell as? MusicTrackCell else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "musicTrackCell",
+            for: indexPath
+        )
+        guard let cell = cell as? MusicTrackCell else {
+            return UITableViewCell()
+        }
         let track = musicTracks[indexPath.row]
         cell.configure(with: track)
         return cell
@@ -47,18 +49,24 @@ extension MainViewController {
                 musicTracks = trackList.tracks
                 tableView.reloadData()
             case .failure(let error):
-                let alert = UIAlertController(
-                    title: "Failure",
-                    message: "You can see error in the Debug aria",
-                    preferredStyle: .alert
-                )
-                let okAction = UIAlertAction(title: "OK", style: .default)
-                alert.addAction(okAction)
-                
-                present(alert, animated: true)
+                DispatchQueue.main.async {
+                    self.alertFailure()
+                }
                 print(error)
             }
         }
+    }
+    
+    private func alertFailure(){
+        let alert = UIAlertController(
+            title: "Failure",
+            message: "You can see error in the Debug aria",
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true)
     }
     
 }
