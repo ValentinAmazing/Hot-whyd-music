@@ -8,17 +8,14 @@ final class MusicTrackCell: UITableViewCell {
     @IBOutlet private var trackNameLabel: UILabel!
     @IBOutlet private var playIconButton: UIButton!
         
-    private var isMusicPlaing: Bool = false
+    private var isMusicPlaing = false
     private var networkManager = NetworkManager.shared
        
     @IBAction func touchButton() {
-        if isMusicPlaing {
-            playIconButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
-            isMusicPlaing.toggle()
-        } else {
-            playIconButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
-            isMusicPlaing.toggle()
-        }
+        let iconPlayPause = isMusicPlaing ? "play.fill" : "pause.fill"
+        
+        playIconButton.setImage(UIImage(systemName: iconPlayPause), for: .normal)
+        isMusicPlaing.toggle()
     }
     
     func configure(with track: Track) {
